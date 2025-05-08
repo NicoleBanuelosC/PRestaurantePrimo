@@ -1,18 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Restaurante Sabores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema REP
+    </title>
+    <style>
+        #contenedorCrearCuenta {
+            display: none; /* Ocultar inicialmente el formulario de crear cuenta */
+        }
+    </style>
 </head>
-<body style="background-color: #fff3cd; text-align: center; font-family: Arial;">
-    <h1 style="color: #4a2c00;">Inicio de Sesión</h1>
-    
-    <div style="margin: 20px;">
-        <input type="text" id="usuario" placeholder="Usuario" style="display: block; margin: 10px auto; padding: 10px; width: 200px; border-radius: 5px; border: 1px solid #ccc;">
-        <input type="password" id="contrasena" placeholder="Contraseña" style="display: block; margin: 10px auto; padding: 10px; width: 200px; border-radius: 5px; border: 1px solid #ccc;">
-        <button onclick="iniciarSesion()" style="background-color: #d97706; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">Entrar</button>
-        <p id="mensaje" style="color: #4a2c00; margin-top: 10px;"></p>
+<body>
+
+    <h1>Restaurante "El Primo"</h1>
+
+    <div id="contenedorInicioSesion">
+        <h2>Iniciar Sesión</h2>
+        <form id="formularioIniciarSesion">
+            <div>
+                <label for="usuario">Usuario o Correo:</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+            <br>
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena">
+            </div>
+            <br>
+            <button type="button" onclick="iniciarSesion()">Ingresar</button>
+            <p><a href="#" onclick="mostrarCrearCuenta()">¿No tienes cuenta? Crear una</a></p>
+            <p><a href="#">Olvidé mi contraseña</a></p>
+        </form>
+        <p id="mensajeInicioSesion"></p>
     </div>
-    
+
+    <div id="contenedorCrearCuenta">
+        <h2>Crear Cuenta</h2>
+        <form id="formularioCrearCuenta">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <br>
+            <div>
+                <label for="nuevaContrasena">Contraseña:</label>
+                <input type="password" id="nuevaContrasena" name="nuevaContrasena">
+            </div>
+            <br>
+            <div>
+                <label for="correoTelefono">Correo o Teléfono:</label>
+                <input type="text" id="correoTelefono" name="correoTelefono">
+            </div>
+            <br>
+            <h3>Domicilio (Opcional)</h3>
+            <div>
+                <label for="domicilio">Domicilio:</label>
+                <input type="text" id="domicilio" name="domicilio" placeholder="Calle y número">
+            </div>
+            <div>
+                <label for="colonia">Colonia:</label>
+                <input type="text" id="colonia" name="colonia">
+            </div>
+            <div>
+                <label for="calle">Calle:</label>
+                <input type="text" id="calle" name="calle">
+            </div>
+            <div>
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero">
+            </div>
+            <div>
+                <label for="cp">C.P.:</label>
+                <input type="text" id="cp" name="cp">
+            </div>
+            <br>
+            <button type="button" onclick="crearCuenta()">Continuar</button>
+            <p><a href="#" onclick="mostrarIniciarSesion()">¿Ya tienes una cuenta? Iniciar sesión</a></p>
+        </form>
+        <p id="mensajeCrearCuenta"></p>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
