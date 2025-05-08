@@ -10,10 +10,11 @@
             display: none; /* Ocultar inicialmente el formulario de crear cuenta */
         }
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Restaurante "El Primo"</h1>
+    <h1>Restaurante</h1>
 
     <div id="contenedorInicioSesion">
         <h2>Iniciar Sesión</h2>
@@ -29,7 +30,7 @@
             </div>
             <br>
             <button type="button" onclick="iniciarSesion()">Ingresar</button>
-            <p><a href="#" onclick="mostrarCrearCuenta()">¿No tienes cuenta? Crear una</a></p>
+            <p><a href="#" onclick="mostrarCrearCuenta()">¿No tienes cuenta? Crear cuenta</a></p>
             <p><a href="#">Olvidé mi contraseña</a></p>
         </form>
         <p id="mensajeInicioSesion"></p>
@@ -55,7 +56,7 @@
             <br>
             <h3>Domicilio (Opcional)</h3>
             <div>
-                <label for="domicilio">Domicilio:</label>
+                <label for="municipio">Domicilio:</label>
                 <input type="text" id="domicilio" name="domicilio" placeholder="Calle y número">
             </div>
             <div>
@@ -76,7 +77,7 @@
             </div>
             <br>
             <button type="button" onclick="crearCuenta()">Continuar</button>
-            <p><a href="#" onclick="mostrarIniciarSesion()">¿Ya tienes una cuenta? Iniciar sesión</a></p>
+            <p><a href="#" onclick="mostrarIniciarSesion()">¿Ya tienes una cuenta? Inicia sesión</a></p>
         </form>
         <p id="mensajeCrearCuenta"></p>
     </div>

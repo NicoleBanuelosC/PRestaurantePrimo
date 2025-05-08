@@ -16,8 +16,9 @@ function iniciarSesion() {
     let contrasena = document.getElementById("contrasena").value;
     let mensajeElemento = document.getElementById("mensajeInicioSesion");
 
-    if (usuario === "ejemplo" && contrasena === "1234") {
+    if (usuario && contrasena !== "") {
         mensajeElemento.textContent = "¡Bienvenido!";
+        // Redirigir a otra página si es necesario:
     } else if (usuario === "" || contrasena === "") {
         mensajeElemento.textContent = "Por favor, ingresa usuario y contraseña.";
     } else {
@@ -31,11 +32,9 @@ function crearCuenta() {
     let correoTelefono = document.getElementById("correoTelefono").value;
     let mensajeElemento = document.getElementById("mensajeCrearCuenta");
 
-    // Aquí iría tu lógica para crear la cuenta (enviar datos al servidor, etc.)
     if (nombre !== "" && nuevaContrasena !== "" && correoTelefono !== "") {
         mensajeElemento.textContent = "Cuenta creada exitosamente.";
         // Redirigir a otra página si es necesario:
-        // window.location.href = "confirmacion_cuenta.html";
     } else {
         mensajeElemento.textContent = "Por favor, completa los campos obligatorios para crear la cuenta.";
     }
